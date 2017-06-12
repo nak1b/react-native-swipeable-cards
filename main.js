@@ -7,8 +7,8 @@ import Deck from './src/Deck';
 const DATA = [
   { id: 1, text: 'Card #1', uri: require('./assets/arch1.jpeg')},
   { id: 2, text: 'Card #2', uri: require('./assets/arch2.jpeg') },
-  { id: 4, text: 'Card #4', uri: require('./assets/arch4.jpeg') },
   { id: 3, text: 'Card #3', uri: require('./assets/arch3.jpeg') },
+  { id: 4, text: 'Card #4', uri: require('./assets/arch4.jpeg') },
   { id: 5, text: 'Card #5', uri: require('./assets/arch5.jpeg') },
   { id: 6, text: 'Card #6', uri: require('./assets/arch6.jpeg') },
   { id: 7, text: 'Card #7', uri: require('./assets/arch7.jpeg') },
