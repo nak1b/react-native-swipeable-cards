@@ -21,24 +21,31 @@ class App extends React.Component {
       <Card 
         image={item.uri}
         key={item.id}
-      >
-        <Text style={{marginTop: 6, fontSize: 15, fontWeight: 'bold'}}>{item.text}</Text>
-        <Text style={{marginTop: 6, marginBottom: 8}}>Card Details Will go Here.</Text>
+        imageStyle={{height: 250}}
+        containerStyle={{height: 250}} />
+    );
+  }
+
+  renderEmptyView() {
+    return (
+      <Card title='No More Cards'>
         <Button
-          icon={{name: 'code'}}
           backgroundColor='#03A9F4'
           buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-          title='VIEW NOW' />
+          title='Fetch More' />
       </Card>
-    );
+    )
   }
 
   render() {
     return (
       <View style={styles.container}>
+
+        <Text style={styles.heading}>Swipe Left Or Right</Text>
         <Deck
           data={DATA}
           renderCard={this.renderCard}
+          renderNoMoreCards={this.renderEmptyView}
         />
       </View>
     );
@@ -48,8 +55,16 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    paddingTop: 40
   },
+
+  heading: {
+    fontSize: 20,
+    color: '#424242',
+    alignSelf: 'center',
+    marginBottom: 16
+  }
 });
 
 Expo.registerRootComponent(App);
